@@ -1,12 +1,13 @@
 # SBT OSGi Demo
 
+A demo project to show how to build a OSGi bundle from a Scala project by using sbt (simple build tool).
+For generating the OSGi bundle the sbt OSGi plugin is used which integrates bnd into sbt.
+
 More details see
 http://wiki.osgi.org/wiki/SbtScalaBndToolchain
 
 ## LICENSE 
  
- Copyright 2012 HTWG Konstanz and Seitenbau
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
