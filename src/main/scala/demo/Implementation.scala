@@ -3,11 +3,6 @@ package demo.internal
 import org.osgi.framework._
 import aQute.bnd.annotation.component._
 import demo.api.Printer
-import aQute.bnd.annotation.component.Component
-import aQute.bnd.annotation.component.Activate
-import aQute.bnd.annotation.component.Component
-import aQute.bnd.annotation.component.Deactivate
-import aQute.bnd.annotation.component.Reference
 
 class SysoutPrinter extends Printer {
 
