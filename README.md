@@ -8,12 +8,12 @@ http://wiki.osgi.org/wiki/SbtScalaBndToolchain
 
 ## Build
   
-  sbt ~osgi-bndle
+	sbt ~osgi-bndle
   
 ## Run
 Run the OSGi framework on changes the demo bundle will updated.
 
-  sbt run
+	sbt run
 
 ## LICENSE 
  
