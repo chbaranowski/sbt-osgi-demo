@@ -7,7 +7,8 @@ version := "1.0.0"
 unmanagedBase <<= baseDirectory ( base => base / "libs" )
 
 libraryDependencies ++= Seq(
-	"org.osgi" % "org.osgi.core" % "4.3.0" % "provided"
+	"org.osgi" % "org.osgi.core" % "4.3.0" % "provided",
+	"org.apache.felix" % "org.apache.felix.framework" % "4.0.3" % "runtime"
 )
 
 osgiSettings

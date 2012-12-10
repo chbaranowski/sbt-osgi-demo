@@ -6,6 +6,15 @@ For generating the OSGi bundle the sbt OSGi plugin is used which integrates bnd 
 More details see
 http://wiki.osgi.org/wiki/SbtScalaBndToolchain
 
+## Build
+  
+  sbt ~osgi-bndle
+  
+## Run
+Run the OSGi framework on changes the demo bundle will updated.
+
+  sbt run
+
 ## LICENSE 
  
 Licensed under the Apache License, Version 2.0 (the "License");

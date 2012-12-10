@@ -16,11 +16,11 @@ class Activator extends BundleActivator {
   val printer = new SysoutPrinter()
 
   override def start(context: BundleContext) {
-    printer.print("Start OSGi Bundle")
+    printer.print("Start OSGi Bundle...")
   }
 
   override def stop(context: BundleContext) {
-    printer.print("Stop OSGi Bundle")
+    printer.print("Stop OSGi Bundle...")
   }
 
 }
@@ -46,9 +46,9 @@ class Client {
   def unsetPrinter(printer : Printer) = this.printer = null
   
   @Activate
-  def start = printer.print("Start DS Client Component")
+  def start = printer.print("Start DS Client Component...")
   
   @Deactivate
-  def stop = printer.print("Stop DS Client Component")
+  def stop = printer.print("Stop DS Client Component...")
   
 }
