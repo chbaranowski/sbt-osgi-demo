@@ -26,7 +26,7 @@ object Run extends App {
   mvnProtocolBundle.start();
   def mvn(url : String) = context.installBundle(String.format("mvn:%s", url))
   val bundles = List(
-    mvn("org.apache.felix/org.apache.felix.gogo.runtime/0.8.0"),
+    	mvn("org.apache.felix/org.apache.felix.gogo.runtime/0.8.0"),
 	mvn("org.apache.felix/org.apache.felix.gogo.shell/0.8.0"),
 	mvn("org.apache.felix/org.apache.felix.gogo.command/0.8.0"),
 	mvn("org.apache.felix/org.apache.felix.fileinstall/3.2.6"),
