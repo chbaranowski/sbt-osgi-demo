@@ -18,23 +18,21 @@ object Run extends App {
   props.put("felix.fileinstall.dir", "target/scala-2.9.2/")
   props.put("felix.fileinstall.filter", ".*\\.jar")
   props.put("felix.fileinstall.poll", "100")
-  
   val framework = frameworkFactory.newFramework(props);
   framework.start();
   val context = framework.getBundleContext();
   val mvnProtocolBundle = context.installBundle(
       "http://repo1.maven.org/maven2/org/ops4j/pax/url/pax-url-mvn/1.3.5/pax-url-mvn-1.3.5.jar")
   mvnProtocolBundle.start();
-  
+  def mvn(url : String) = context.installBundle(String.format("mvn:%s", url))
   val bundles = List(
-    context.installBundle("mvn:org.apache.felix/org.apache.felix.gogo.runtime/0.8.0"),
-	context.installBundle("mvn:org.apache.felix/org.apache.felix.gogo.shell/0.8.0"),
-	context.installBundle("mvn:org.apache.felix/org.apache.felix.gogo.command/0.8.0"),
-	context.installBundle("mvn:org.apache.felix/org.apache.felix.fileinstall/3.2.6"),
-	context.installBundle("mvn:org.apache.felix/org.apache.felix.scr/1.6.2/")
+    mvn("org.apache.felix/org.apache.felix.gogo.runtime/0.8.0"),
+	mvn("org.apache.felix/org.apache.felix.gogo.shell/0.8.0"),
+	mvn("org.apache.felix/org.apache.felix.gogo.command/0.8.0"),
+	mvn("org.apache.felix/org.apache.felix.fileinstall/3.2.6"),
+	mvn("org.apache.felix/org.apache.felix.scr/1.6.2")
   )
   bundles.foreach(bundle => bundle.start())
-  
   framework.waitForStop(0) 
   
   println("End OSGi Session...")
